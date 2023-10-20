@@ -14,6 +14,7 @@
 }
 .spinner_image{
     width: 150px;
+    border-radius: 3vh;
 }
 .spinner_item{
     width: 100%;
