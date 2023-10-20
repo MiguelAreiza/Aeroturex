@@ -79,7 +79,7 @@ function Tiket() {
             <h2 className='form_subtitle'>{date}</h2>
             
             <Input type='text' value={position} setValue={setPosition} name='Puesto' disabled />
-            <Input type='text' value={name} setValue={setName} name='Nombre' />
+            <Input type='text' value={name} setValue={setName} name='Nombre' disabled />
             <Input type='number' value={document} setValue={setDocument} name='Documento' disabled />
             <Input type='money' value={price} setValue={setPrice} name='Precio' disabled />
             <Input type='text' value={paymentMethod} setValue={setPaymentMethod} name='Metodo de pago' disabled />
