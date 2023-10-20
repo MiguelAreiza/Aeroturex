@@ -1,0 +1,131 @@
+/* TakeOrder styles */
+.container_qr_reader{
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--secondary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+.container_qr_reader > h3{
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 3vh 0;
+}
+.container_qr_reader > .qrReader{
+    width: 580px;
+    max-width: 96%;
+    margin-top: 6vh;
+    padding: 3vh;
+    border: 5px solid var(--white);
+    border-radius: 1vh;
+    position: relative;
+}
+.container_qr_reader > .qrReader::before{
+    content: '';
+    width: calc(100% + 10px);
+    height: calc(100% - 140px);
+    position: absolute;
+    top: 70px;
+    left: -5px;
+    background: var(--secondary);
+}
+.container_qr_reader > .qrReader::after{
+    content: '';
+    width: calc(100% - 140px);
+    height: calc(100% + 10px);
+    position: absolute;
+    top: -5px;
+    left: 70px;
+    background: var(--secondary);
+}
+.container_qr_reader > .qrReader > .reload{
+    position: absolute;
+    top: -35px;
+    left: calc(50% - 20px);
+    z-index: 2;
+    fill: var(--white);
+    stroke-width: .5px;
+    stroke: var(--white);
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+.container_qr_reader > .qrReader > .reload.active{
+    -webkit-animation: reload 2s infinite;
+            animation: reload 2s infinite;
+}
+.container_qr_reader > .qrReader > div > video{
+    max-width: 100%;
+    border-radius: 1vh;
+    position: relative;
+    z-index: 2;
+}
+.container_qr_reader > .qrReader > div::before{
+    content: '';
+    width: calc(100% - 3vh);
+    height: 3px;
+    border-radius: 2px;
+    box-shadow: 0 -3px 6px #c5262c;
+    position: absolute;
+    top: 1.5vh;
+    left: 1.5vh;
+    z-index: 5;
+    background: #c5262c;
+    transition: .6s ease-in;
+    -webkit-animation: scan 5s infinite;
+            animation: scan 5s infinite;
+}
+
+/* Animations */
+@-webkit-keyframes reload {
+    to {
+        transform: rotate(-1000deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+@keyframes reload {
+    to {
+        transform: rotate(-1000deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes scan {
+    0%, 100% {
+        top: 1.5vh;
+        box-shadow: 0 -3px 6px #c5262c;
+    }
+    40% {
+        box-shadow: 0 -3px 6px #c5262c;
+    }
+    50% {
+        top: calc(100% - 1.5vh);
+        box-shadow: 0 3px 6px #c5262c;
+    }
+    90% {
+        box-shadow: 0 3px 6px #c5262c;
+    }
+}
+@keyframes scan {
+    0%, 100% {
+        top: 1.5vh;
+        box-shadow: 0 -3px 6px #c5262c;
+    }
+    40% {
+        box-shadow: 0 -3px 6px #c5262c;
+    }
+    50% {
+        top: calc(100% - 1.5vh);
+        box-shadow: 0 3px 6px #c5262c;
+    }
+    90% {
+        box-shadow: 0 3px 6px #c5262c;
+    }
+}

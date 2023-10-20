@@ -1,0 +1,11 @@
+/* PageContent styles */
+.page_content{
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}

@@ -1,0 +1,33 @@
+/* Index styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+:root{
+    --principal: #00ABEB;
+    --secondary: #2D4E7F;
+    --tertiary: #001A46;
+    --green: #BBCA45;
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #201C2A;
+    --wrap: #0008;
+    --inputs: #F4F4F4;
+    --cards: #D9D9D950;
+    --border: #E0E0E0;
+}
+body {
+    margin: 0;
+    background: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
