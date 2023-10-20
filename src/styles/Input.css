@@ -8,6 +8,20 @@
     justify-content: center;
     align-items: flex-start;
 }
+.form_title{
+    display: block;
+    width: 100%;
+    margin-top: 2vh;
+    text-align: center;
+    color: var(--tertiary);
+}
+.form_subtitle{
+    display: block;
+    width: 100%;
+    margin-bottom: 2vh;
+    text-align: center;
+    color: var(--secondary);
+}
 .input_field{
     width: 300px;
     min-height: 60px;

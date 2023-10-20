@@ -62,7 +62,7 @@ function Reader() {
                 const audio = new Audio(AudioQR);
                 audio.play();                
                 setPrevScan(data.text);
-                if (!data.text.includes('https://aeroturex.maddiapp.com/tiket/id:') || !data.text.split('/')[4]) {
+                if (!data.text.includes('https://aeroturex.maddiapp.com/tiket/tour:') || !data.text.split('/')[4]) {
                     addToastr('Cliente no valido', 'info');
                 } else {
                     navigate(`/tiket/${data.text.split('/')[4]}`);
